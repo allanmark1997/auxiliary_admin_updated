@@ -361,7 +361,7 @@
                               // $("#showMeterList").html(data)
                               // }
                               // });
-                            location.href='meterlist.html';
+                            location.href='meterList.html';
 
                         }
                         else if(data2 === "errors"){

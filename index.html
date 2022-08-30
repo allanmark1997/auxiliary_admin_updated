@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags always come first -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Central Mindanao University</title>
+
+<!-- header logo -->
+<link rel="icon" href="cmuLogo.png" type="image/x-icon">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Sweet Alert css -->
+<link rel="stylesheet" href="sweetAlert/dist/sweetalert2.min.css">
+
+
+  <style>
+
+    html,
+        body,
+        header,
+        .view {
+          height: 100vh;
+        }
+
+        @media (max-width: 740px) {
+          html,
+          body,
+          header,
+          .view {
+            height: 800px;
+          }
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+          html,
+          body,
+          header,
+          .view  {
+            height: 650px;
+          }
+        }
+
+        .intro-2 {
+            background: url("background/tenor.gif")no-repeat center center;
+            background-size: cover;
+        }
+        .top-nav-collapse {
+            background-color: #3f51b5 !important;
+        }
+        .navbar:not(.top-nav-collapse) {
+            background: transparent !important;
+        }
+        @media (max-width: 768px) {
+            .navbar:not(.top-nav-collapse) {
+                background: green !important;
+            }
+        }
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #3f51b5!important;
+            }
+        }
+
+        .card {
+            background-color: rgba(229, 228, 255, 0.2);
+        }
+        .md-form label {
+            color: #ffffff;
+        }
+        h6 {
+            line-height: 1.7;
+        }
+        .card {
+            margin-top: 30px;
+            /*margin-bottom: -45px;*/
+        }
+        .md-form input[type=text]:focus:not([readonly]),
+        .md-form input[type=password]:focus:not([readonly]) {
+            border-bottom: 1px solid #8EDEF8;
+            box-shadow: 0 1px 0 0 #8EDEF8;
+        }
+        .md-form input[type=text]:focus:not([readonly])+label,
+        .md-form input[type=password]:focus:not([readonly])+label {
+            color: #8EDEF8;
+        }
+        .md-form .form-control {
+            color: #fff;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+  <!--Main Navigation-->
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+      <div class="container">
+        <h3 class="navbar-brand" ><strong><b>CMU Auxiliary Office: Administrator & Staff</b></strong></h3>
+      </div>
+    </nav>
+
+    <!--Intro Section-->
+    <section class="view intro-2">
+      <div class="mask rgba-stylish-strong h-100 d-flex justify-content-center align-items-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-10 col-sm-12 mx-auto mt-lg-5">
+
+              <!--Form with header-->
+              <div class="card wow fadeInLeft" data-wow-delay="0.8s">
+                <div class="card-body">
+                  <fieldset>
+                  <!--Header-->
+                  <div class="form-header green">
+                    <h1 class=" wow fadeIn" data-wow-delay="1.5s">Log in</h1>
+                  </div>
+
+                  <!--Body-->
+                    <div class="md-form wow fadeInLeft" data-wow-delay="2s">
+                    <i class="fas fa-user prefix white-text"></i>
+                    <input type="text" name="txtUser" id="username" class="form-control">
+                    <label for="orangeForm-name">Your username</label>
+                  </div>
+                  <div class="md-form wow fadeInRight" data-wow-delay="2.5s">
+                    <i class="fas fa-lock prefix white-text"></i>
+                    <input type="password" name="txtPass" id="password" class="form-control">
+                    <label for="orangeForm-pass">Your password</label>
+                  </div>
+
+                  <div class="text-center wow fadeIn" data-wow-delay="2.5s">
+                    <button type = "submit" name = "btnLogin" id="btnLogin" class="btn yellow btn-lg"><b>Log in</b></button>
+                    <hr>
+                  </div>
+                  </fieldset>
+                  <div class ="text-center">
+                    Don't have an account?
+                   <!--<a href="register.html" style=" text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;">Register here</a>-->
+                  </div>
+                  
+                </div>
+              </div>
+              <!--/Form with header-->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </header>
+</body>
+
+
+ 
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+ 
+
+
+  <script>
+    new WOW().init();
+
+  </script>
+
+<script src="sweetAlert/dist/sweetalert2.min.js"> </script>
+  <script>
+   $(document).ready(function(e){
+          $('#btnLogin').click(function(e){
+             var username = document.getElementById("username").value;
+             var password = document.getElementById("password").value;
+
+             if (username === "" || password === "") {
+                Swal.fire({
+                        icon: 'warning',
+                        title: 'Invalid',
+                        text: 'Please fill out all fields, Thank you',
+                        showConfirmButton: true
+                      })
+             }
+             else {
+                 $.ajax({
+                url:'trigger/login.php',
+                method:'POST',
+                data:{username:username,password:password},
+                  success:function(data){
+                    if(data === "ok"){
+                      Swal.fire({
+                        icon: 'success',
+                        title: 'Login Success!',
+                        text: 'Please wait...',
+                        timer: 5000,
+                        showConfirmButton: true
+                      })
+                      location.href = "dashboardAdmin.html";
+                    }
+                    else if(data === "disabled")
+                    {
+                      Swal.fire({
+                        icon: 'warning',
+                        title: 'Disabled',
+                        text: 'Your Account is DISABLE. Please check to the admin for consultation, Thank you.',
+                        showConfirmButton: true
+                      })
+                    }
+                    else if (data === "wrong") {
+                      Swal.fire({
+                        icon: 'error',
+                        title: 'Invalid',
+                        text: 'Wrong username or password, please try again.',
+                        showConfirmButton: true
+                      })
+                    }
+                  }
+              });
+             }
+            
+         });
+        });
+</script>
+ <!-- sweet alert js -->
+
+
+  <script></script>
+</html>

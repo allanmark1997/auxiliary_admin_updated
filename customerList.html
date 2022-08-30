@@ -1,0 +1,235 @@
+<script src="js/jquery-3.4.1.min.js"></script>
+  <script>
+  $(document).ready(function()
+  {
+      $.ajax({
+        url:'trigger/sessionID.php',
+        method: 'POST',
+        success:function(data){
+          if (data==="noUserID") {
+            location.href = "index.html";
+          }
+        }
+      });  
+  });
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Central Mindanao University</title>
+  <!-- Font Awesome <link rel="stylesheet" href="css/all.css"> -->
+  
+
+<!-- header logo -->
+<link rel="icon" href="cmuLogo.png" type="image/x-icon">
+
+  
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+<link rel="stylesheet" href="sweetAlert/dist/sweetalert2.min.css">
+<script src="sweetAlert/dist/sweetalert2.min.js"> </script>
+
+
+
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 4 -->
+  <!-- Ionicons 
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">-->
+  <!-- Theme style -->
+
+  <!-- Google Font: Source Sans Pro -->
+  <style>
+
+    .map-container{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+</style>
+  <!-- Your custom styles (optional) -->
+  <style>
+body{
+           background: url("background/awesome-water-background-1.jpg")no-repeat center center;
+            background-size: cover;
+        }
+  </style>
+</head>
+
+<body class="fixed-sn white-skin">
+
+  <!-- Main Navigation -->
+  <header>
+
+    <!-- Sidebar navigation -->
+    <div id="slide-out" class="side-nav fixed">
+      <ul class="custom-scrollbar">
+
+        <!-- Logo -->
+        <li class="logo-sn waves-effect py-3">
+          <div class="text-center">
+           <a href="dashboardAdmin.html" class="pl-0"><img src="cmuLogo.png" width="170" height="110" align="center"></a>
+          </div>-->
+        </li>
+
+        <!-- Side navigation links -->
+        <li>
+          <ul class="collapsible collapsible-accordion">
+
+            <li>
+                <ul>
+                  <li>
+                    <a href="dashboardAdmin.html" class="waves-effect"><b><i class="w-fa fas fa-tachometer-alt"></i>Dashboard</b></a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="employeeList.html" class="waves-effect"><b><i class="w-fa fas fa-list-alt"></i>Employee List</b></a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="customerList.html" class="waves-effect"><b><i class="w-fa fas fa-list-alt"></i>Customer List</b></a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="meterList.html" class="waves-effect"><b><i class="w-fa fas fa-list-alt"></i>Meter List</b></a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="paymentHistory.html" class="waves-effect"><b><i class="w-fa fas fa-list-alt"></i>Payment History List</b></a>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="generateReport.html" class="waves-effect"><b><i class="w-fa fas fa-print"></i>Generate Report</b></a>
+                  </li>
+                </ul>
+            </li>
+          </ul>
+        </li>
+      <div class="sidenav-bg mask-strong"></div>
+    </div>
+    <!-- Sidebar navigation -->
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg scrolling-navbar double-nav">
+
+      <!-- SideNav slide-out button -->
+      <div class="float-left">
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars"></i></a>
+      </div>
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-dn mr-auto">
+        <p><strong><b>CUSTOMER LISTS</b></strong></p>
+      </div>
+
+      <!-- Navbar links -->
+      <ul class="nav navbar-nav nav-flex-icons ml-auto">
+      </ul>
+      <!-- Navbar links -->
+
+    </nav>
+    <!-- Navbar -->
+
+  </header>
+  <!-- Main Navigation -->
+
+  <!-- Main layout -->
+  <main>
+    <section class="mt-md-10 pt-md-2 mb-5 pb-6">
+    <div class="container-fluid">
+      <div class="center">
+
+        <div class="col-xl-12 col-lg-4 col-md-5 col-sm-12 mx-auto mt-lg-5" align="center">
+  
+          <!--Card -->
+          <div class="card" id="showCustomerList">
+
+            <!--Card content -->
+          <div class="card-body">
+            <p class="h3 text-center mb-4"><strong><b>
+              CUSTOMER LISTS
+             </b></strong></p>
+          <div class="col-12 table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr align="center">    
+                  <th>ID No.</th>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Category</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+                <tr align="center">
+                  <td>Loading...</td>
+                  <td>Loading...</td>
+                  <td>Loading...</td>
+                  <td>Loading...</td>
+                  <td>Loading...</td>
+                  <td>Loading...</td>
+                </tr>
+                </thead>
+            </table>
+          </div>
+
+          </div>
+          </div>
+
+          </div>
+          <!--Card -->
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!--Custom scripts -->
+  <script>
+    // SideNav Initialization
+    $(".button-collapse").sideNav();
+
+  </script>
+      <script type="text/javascript">
+
+        $(document).ready(function(){
+
+          $.ajax({
+            type : 'POST',
+            url  : 'trigger/loadTotalCustomer.php',
+            success :  function(data){
+             $('#showCustomerList').empty();
+             $("#showCustomerList").html(data)
+           }
+         });
+
+        });
+      </script>
+</body>
+
+</html>
